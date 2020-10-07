@@ -1,0 +1,29 @@
+[package]
+name = "serde-scale-wrap"
+version = "0.1.0"
+authors = ["Stephane Raux <stephaneyfx@gmail.com>"]
+edition = "2018"
+description = "Wrapper for types implementing `Serialize`/`Deserialize` to implement `Encode`/`Decode` automatically"
+license = "Zlib"
+homepage = "https://github.com/stephaneyfx/serde-scale-wrap"
+repository = "https://github.com/stephaneyfx/serde-scale-wrap.git"
+readme = "README.md"
+keywords = ["serde", "scale", "serialization", "substrate"]
+
+[features]
+default = ["std"]
+std = ["parity-scale-codec/std", "serde/std", "serde-scale/std"]
+
+[dependencies.parity-scale-codec]
+version = "1.3.5"
+default-features = false
+
+[dependencies.serde]
+version = "1.0.116"
+default-features = false
+features = ["alloc"]
+
+[dependencies.serde-scale]
+version = "0.1.0"
+default-features = false
+features = ["alloc"]
