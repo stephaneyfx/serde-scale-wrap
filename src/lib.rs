@@ -39,8 +39,7 @@
 //! # Features
 //! `no_std` is supported by disabling default features.
 //!
-//! - `std`: Support for `std`. It is enabled by default. ⚠ It must be enabled if the `serde/std`
-//! feature is enabled by any crate in the dependency tree.
+//! - `std`: Support for `std`. It is enabled by default.
 //!
 //! # Contribute
 //! All contributions shall be licensed under the [zlib license](https://opensource.org/licenses/Zlib).
