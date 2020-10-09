@@ -1,6 +1,6 @@
 [package]
 name = "serde-scale-wrap"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Stephane Raux <stephaneyfx@gmail.com>"]
 edition = "2018"
 description = "Wrapper for types implementing `Serialize`/`Deserialize` to implement `Encode`/`Decode` automatically"
@@ -24,6 +24,6 @@ default-features = false
 features = ["alloc"]
 
 [dependencies.serde-scale]
-version = "0.2.0"
+version = "0.2.1"
 default-features = false
 features = ["alloc"]
