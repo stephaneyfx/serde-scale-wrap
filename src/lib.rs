@@ -58,7 +58,7 @@ use core::{
     convert::Infallible,
     fmt::{self, Display},
 };
-use parity_scale_codec::{Decode, Encode, Input, Output};
+use parity_scale_codec::{Decode, Encode, EncodeLike, Input, Output};
 use serde::{Deserialize, Serialize};
 use serde_scale::{Bytes, Read, Write};
 
@@ -81,6 +81,8 @@ impl<T: Serialize> Encode for Wrap<T> {
         self.0.serialize(&mut serializer).unwrap();
     }
 }
+
+impl<T: Serialize> EncodeLike for Wrap<T> {}
 
 impl<'de, T: Deserialize<'de>> Decode for Wrap<T> {
     fn decode<I: Input>(input: &mut I) -> Result<Self, parity_scale_codec::Error> {
