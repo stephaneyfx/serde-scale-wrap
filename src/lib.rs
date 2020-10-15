@@ -41,6 +41,19 @@
 //!
 //! - `std`: Support for `std`. It is enabled by default.
 //!
+//! 🔖 Features enabled in build dependencies and proc-macros are also enabled for normal
+//! dependencies, which may cause `serde` to have its `std` feature on when it is not desired.
+//! Nightly cargo prevents this from happening with
+//! [`-Z features=host_dep`](https://github.com/rust-lang/cargo/issues/7915#issuecomment-683294870)
+//! or the following in `.cargo/config`:
+//!
+//! ```toml
+//! [unstable]
+//! features = ["host_dep"]
+//! ```
+//!
+//! For example, this issue arises when depending on `parity-scale-codec-derive`.
+//!
 //! # Contribute
 //! All contributions shall be licensed under the [zlib license](https://opensource.org/licenses/Zlib).
 //!
