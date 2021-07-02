@@ -15,7 +15,7 @@ default = ["std"]
 std = ["parity-scale-codec/std", "serde/std", "serde-scale/std"]
 
 [dependencies.parity-scale-codec]
-version = "1.3.5"
+version = "2.1.3"
 default-features = false
 
 [dependencies.serde]

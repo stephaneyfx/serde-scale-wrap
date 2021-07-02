@@ -8,9 +8,6 @@
 Wrapper for types implementing [`Serialize`/`Deserialize`](https://docs.rs/serde) to implement
 [`Encode`/`Decode`](https://docs.rs/parity-scale-codec) automatically.
 
-⚠ The `Error` type exposed by this crate is meant to disappear if/when `parity-scale-codec`'s
-`Error` implements `Display` unconditionally.
-
 # Example
 ```rust
 extern crate alloc;
